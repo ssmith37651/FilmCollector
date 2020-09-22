@@ -7,7 +7,7 @@
 	</p>
 	<p>
 		<label>Duration:</label>
-		<input type="text" name="actor[duration]">
+		<input type="text" name="movie[duration]">
 	</p>
 	<p>
 		<label>Rating:</label>
@@ -15,7 +15,13 @@
 	</p>
 	<p>
 		<label>Release Date:</label>
-		<input type="text" name="actor[release_date]">
+		<input type="text" name="movie[release_date]">
 	</p>
 	<input type="submit" value="Create">
 </form>
+
+<% if flash[:errors]  %>
+	<% flash[:errors].each do |e| %>
+	<p><%= e %></p>
+	<% end %>
+<% end %>
